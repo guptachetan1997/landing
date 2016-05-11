@@ -1,0 +1,36 @@
+{% extends "basic/header.html" %} {% block title_extra %} Landing {% endblock %} {% block content %}
+<div class="jumbotron">
+  <center>
+    {% if request.user.is_authenticated %}
+    <h1>Welcome {{request.user.username}}</h1> {% else %}
+    <h1>Welcome stranger</h1> {% endif %}
+  </center>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ad perferendis ea at asperiores, illum consequuntur
+    reprehenderit fuga, non repellat quasi alias, repellendus quidem laborum optio autem quisquam veniam sapiente?</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
+
+{% endblock %}
