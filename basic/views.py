@@ -5,7 +5,7 @@ from django.contrib.auth import login,logout,authenticate
 from django.core.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from forms import RegistrationForm
+from .forms import RegistrationForm
 
 def log_in(request):
     if request.user.is_authenticated():
